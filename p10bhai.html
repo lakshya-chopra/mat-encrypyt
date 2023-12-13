@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>p10bhai</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script id="MathJax-script" type="application/javascript" async="true" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="p10bhai_htmlimg/p10bhai.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 23.05.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">encoding</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_function">from</span>
+            <span class="code_number">0</span>
+            <span class="code_function">thru</span>
+            <span class="code_number">127</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">encoding</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">append</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">encoding</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">ascii</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">encoding</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(encoding)	}[]\]
+</p>
+    <p>\[\operatorname{	}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i6)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">message</span>
+            <span class="code_operator">:</span>
+            <span class="code_string">"Hello my name is Lakshya!"</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">maplist</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">cint</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">charlist</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">message</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_comment">/*very nice bro*/</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">len</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">slength</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">message</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(message)	}"Hello my name is Lakshya!"\]
+</p>
+    <p>\[\operatorname{(msg\_ vec)	}\left[ 72\operatorname{,}101\operatorname{,}108\operatorname{,}108\operatorname{,}111\operatorname{,}32\operatorname{,}109\operatorname{,}121\operatorname{,}32\operatorname{,}110\operatorname{,}97\operatorname{,}109\operatorname{,}101\operatorname{,}32\operatorname{,}105\operatorname{,}115\operatorname{,}32\operatorname{,}76\operatorname{,}97\operatorname{,}107\operatorname{,}115\operatorname{,}104\operatorname{,}121\operatorname{,}97\operatorname{,}33\right] \]
+</p>
+    <p>\[\operatorname{(len)	}25\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i8)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">append</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">32</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">len_new</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(msg\_ vec)	}\left[ 72\operatorname{,}101\operatorname{,}108\operatorname{,}108\operatorname{,}111\operatorname{,}32\operatorname{,}109\operatorname{,}121\operatorname{,}32\operatorname{,}110\operatorname{,}97\operatorname{,}109\operatorname{,}101\operatorname{,}32\operatorname{,}105\operatorname{,}115\operatorname{,}32\operatorname{,}76\operatorname{,}97\operatorname{,}107\operatorname{,}115\operatorname{,}104\operatorname{,}121\operatorname{,}97\operatorname{,}33\operatorname{,}32\right] \]
+</p>
+    <p>\[\operatorname{(len\_ new)	}26\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i27)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">next</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">4</span>
+            <span class="code_function">thru</span>
+            <span class="code_variable">len_new</span>
+            <span class="code_operator">−</span>
+            <span class="code_number">2</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">append</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">matrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">msg_vec</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(new\_ matrix)	}[]\]
+</p>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <p>\[\operatorname{	}\left[ \begin{pmatrix}72 &amp; 101\\
+108 &amp; 108\end{pmatrix}\operatorname{,}\begin{pmatrix}111 &amp; 32\\
+109 &amp; 121\end{pmatrix}\operatorname{,}\begin{pmatrix}32 &amp; 110\\
+97 &amp; 109\end{pmatrix}\operatorname{,}\begin{pmatrix}101 &amp; 32\\
+105 &amp; 115\end{pmatrix}\operatorname{,}\begin{pmatrix}32 &amp; 76\\
+97 &amp; 107\end{pmatrix}\operatorname{,}\begin{pmatrix}115 &amp; 104\\
+121 &amp; 97\end{pmatrix}\right] \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i15)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">encoding_mat</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">matrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">3</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">6</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">encoded_message</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">encoding_mat</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(encoding\_ mat)	}\begin{pmatrix}3 &amp; 4\\
+5 &amp; 6\end{pmatrix}\]
+</p>
+    <p>\[\operatorname{(encoded\_ message)	}[]\]
+</p>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <p>\[\operatorname{	}\left[ \begin{pmatrix}721 &amp; 894\\
+864 &amp; 1080\end{pmatrix}\operatorname{,}\begin{pmatrix}493 &amp; 636\\
+932 &amp; 1162\end{pmatrix}\operatorname{,}\begin{pmatrix}646 &amp; 788\\
+836 &amp; 1042\end{pmatrix}\operatorname{,}\begin{pmatrix}463 &amp; 596\\
+890 &amp; 1110\end{pmatrix}\operatorname{,}\begin{pmatrix}476 &amp; 584\\
+826 &amp; 1030\end{pmatrix}\operatorname{,}\begin{pmatrix}865 &amp; 1084\\
+848 &amp; 1066\end{pmatrix}\right] \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i18)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">decoding_mat</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">invert</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">encoding_mat</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">decoding_mat</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(decoding\_ mat)	}\begin{pmatrix}\operatorname{-}3 &amp; 2\\
+\frac{5}{2} &amp; \operatorname{-}\left( \frac{3}{2}\right) \end{pmatrix}\]
+</p>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <p>\[\operatorname{	}\left[ \begin{pmatrix}72 &amp; 101\\
+108 &amp; 108\end{pmatrix}\operatorname{,}\begin{pmatrix}111 &amp; 32\\
+109 &amp; 121\end{pmatrix}\operatorname{,}\begin{pmatrix}32 &amp; 110\\
+97 &amp; 109\end{pmatrix}\operatorname{,}\begin{pmatrix}101 &amp; 32\\
+105 &amp; 115\end{pmatrix}\operatorname{,}\begin{pmatrix}32 &amp; 76\\
+97 &amp; 107\end{pmatrix}\operatorname{,}\begin{pmatrix}115 &amp; 104\\
+121 &amp; 97\end{pmatrix}\right] \]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i37)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">decoded</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">for</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">for</span>
+            <span class="code_variable">j</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_number">2</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_function">for</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">thru</span>
+            <span class="code_number">2</span>
+            <span class="code_function">do</span>
+            <span class="code_operator">(</span>
+            <span class="code_endofline">
+              <br/>
+            </span>            
+            <span class="code_variable">decoded</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">append</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">decoded</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">new_matrix</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">j</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">decoded</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">chars</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">maplist</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">ascii</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">decoded</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">chars</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">simplode</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">chars</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(decoded)	}[]\]
+</p>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{done}}\]
+</p>
+    <p>\[\operatorname{	}\left[ 72\operatorname{,}101\operatorname{,}108\operatorname{,}108\operatorname{,}111\operatorname{,}32\operatorname{,}109\operatorname{,}121\operatorname{,}32\operatorname{,}110\operatorname{,}97\operatorname{,}109\operatorname{,}101\operatorname{,}32\operatorname{,}105\operatorname{,}115\operatorname{,}32\operatorname{,}76\operatorname{,}97\operatorname{,}107\operatorname{,}115\operatorname{,}104\operatorname{,}121\operatorname{,}97\right] \]
+</p>
+    <p>\[\operatorname{(chars)	}\left[ "H"\operatorname{,}"e"\operatorname{,}"l"\operatorname{,}"l"\operatorname{,}"o"\operatorname{,}" "\operatorname{,}"m"\operatorname{,}"y"\operatorname{,}" "\operatorname{,}"n"\operatorname{,}"a"\operatorname{,}"m"\operatorname{,}"e"\operatorname{,}" "\operatorname{,}"i"\operatorname{,}"s"\operatorname{,}" "\operatorname{,}"L"\operatorname{,}"a"\operatorname{,}"k"\operatorname{,}"s"\operatorname{,}"h"\operatorname{,}"y"\operatorname{,}"a"\right] \]
+</p>
+    <p>\[\operatorname{(chars)	}"Hello my name is Lakshya"\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+    <small> The source of this Maxima session can be downloaded 
+      <a href="p10bhai_htmlimg/p10bhai.wxmx">here</a>.</small>
+  </body>
+</html>
